@@ -1,0 +1,36 @@
+Kino{
+	background:white;
+}
+Pracownicy{
+
+}
+Pracownik{
+		display:block;
+}
+Film{
+	display:block;
+}
+
+SaleKinowe{
+	
+}
+Sala{
+	display:block;
+	border: 5px solid blue;
+}
+Rzad{
+	display:block;
+	text-align:center;
+}
+Bar{
+	display:block;
+}
+Klient{
+	display:block;
+}
+Miejsce{
+	display:inline;
+	text-align:center;
+	margin:5px;
+	border: 1px solid black;
+}
