@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<xs:schemaxmlns:xs="http://www.w3.org/2001/XMLSchema"
+					targetNamespace="https://www.w3schools.com"
+					xmlns="https://www.w3schools.com"
+					elementFormDefault="qualified">
+
+<!-- definition of simple elements -->
+<xs:element name="Imie" type="xs:string"/>
+<xs:element name="Nazwisko" type="xs:string"/>
+<xs:element name="DataPodpisania" type="xs:string"/>
+<xs:element name="DataZakonczenia" type="xs:string"/>
+<xs:element name="Email" type="xs:string"/>
+<xs:element name="Tytul" type="xs:string"/>
+<xs:element name="Wytwornia" type="xs:string"/>
+<xs:element name="Miejsce" type="xs:string"/>
+<xs:element name="Napoj" type="xs:string"/>
+<xs:element name="Przekaska" type="xs:string"/>
+
+<!-- definition of attributes -->
+<xs:attribute name="Plec" type="xs:string"/>
+<xs:attribute name="Typ" type="xs:string"/>
+<xs:attribute name="Kategoria" type="xs:string"/>
+<xs:attribute name="NrSali" type="xs:string"/>
+<xs:attribute name="Numer" type="xs:string"/>
+
+<!-- definition of complex elements -->
+
+
+
+
+
+</xs:schema>
