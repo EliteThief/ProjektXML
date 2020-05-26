@@ -1,0 +1,56 @@
+<!ELEMENT Kino (Pracownicy,Filmy,SaleKinowe,Bar,Klienci)>
+<!ELEMENT Pracownicy (Pracownik+)>
+<!ELEMENT Pracownik (Imie,Nazwisko,Umowa,Email)>
+<!ELEMENT Imie (#PCDATA)>
+<!ELEMENT Nazwisko (#PCDATA)>
+<!ELEMENT Umowa (DataPodpisania,DataZakonczenia)>
+<!ELEMENT DataPodpisania (#PCDATA)>
+<!ELEMENT DataZakonczenia (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Filmy (Film+)>
+<!ELEMENT Film (Tytul,Rezyser,Wytwornia,Obsada)>
+<!ELEMENT Tytul (#PCDATA)>
+<!ELEMENT Rezyser (Imie,Nazwisko)>
+<!ELEMENT Imie (#PCDATA)>
+<!ELEMENT Nazwisko (#PCDATA)>
+<!ELEMENT Wytwornia (#PCDATA)>
+<!ELEMENT Obsada (Aktor+)>
+<!ELEMENT Aktor (Imie,Nazwisko)>
+<!ELEMENT Imie (#PCDATA)>
+<!ELEMENT Nazwisko (#PCDATA)>
+<!ELEMENT SaleKinowe (Sala+)>
+<!ELEMENT Sala (Rzad+)>
+<!ELEMENT Rzad (Miejsce+)>
+<!ELEMENT Miejsce (#PCDATA)>
+<!ELEMENT Bar (Napoje,Przekaski)>
+<!ELEMENT Napoje (Napoj+)>
+<!ELEMENT Napoj (#PCDATA)>
+<!ELEMENT Przekaski (Przekaska+)>
+<!ELEMENT Przekaska (#PCDATA)>
+<!ELEMENT Klienci (Klient+)>
+<!ELEMENT Klient (Imie,Nazwisko,Email)>
+<!ELEMENT Imie (#PCDATA)>
+<!ELEMENT Nazwisko (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+
+<!ATTLIST Pracownik Plec CDATA #REQUIRED>
+<!ATTLIST Umowa Typ (Zlecenie|Prace|Dzielo) 'Zlecenie'>
+<!ATTLIST Film Kategoria CDATA #REQUIRED >
+<!ATTLIST Sala NrSali ID #REQUIRED>
+<!ATTLIST Rzad Numer CDATA #REQUIRED>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
