@@ -6,7 +6,10 @@
 <xsl:output method="html"/>
 
 	<xsl:template match="/">
-		<html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
 			<body>
 			<section>
 				<h2>Nasi Pracownicy</h2>	
@@ -32,55 +35,60 @@
 			<section>
 			
 				<h2>Najnowsze Filmy</h2>
-				
+				<div class="filmy">
 				<xsl:for-each select="Kino/Filmy/Film">
-					<div class ="filmy">
-						<div class ="filmyTytul"><xsl:value-of select="Tytul"/></div>
-						<div class="filmyWytwornia"><xsl:value-of select="Wytwornia"/></div>
-						<div class="filmyRezyserImie"><xsl:value-of select="Rezyser/Imie"/> </div>
-						<div class="filmyRezyserNazwisko"><xsl:value-of select="Rezyser/Nazwisko"/></div>
+					<div class ="film">
+						<div class ="filmTytul">Tytuł: <xsl:value-of select="Tytul"/></div>
+						<div class="filmWytwornia">Wytwornia: <xsl:value-of select="Wytwornia"/></div>
+						<div class="filmRezyser">Rezyser: <xsl:value-of select="Rezyser/Imie"/><xsl:text> </xsl:text><xsl:value-of select="Rezyser/Nazwisko"/></div>
 					</div>
 				</xsl:for-each>		
-				
+				</div>
 			</section>
 			<section>	
 				<h2>Znani Aktorzy</h2>
 				
 					<xsl:for-each select="Kino/Filmy/Film/Obsada/Aktor">
-					<div class="aktor">
-						<div class="aktorImie"><xsl:value-of select="Imie"/></div>
-						<div class="aktorNazwisko"><xsl:value-of select="Nazwisko"/></div>
-					</div>
+						<div class="aktor">Aktor :<xsl:value-of select="Imie"/><xsl:text> </xsl:text><xsl:value-of select="Nazwisko"/></div>
 					</xsl:for-each>	
 			</section>
 			<section>
 				<h2> Nasz Bar </h2>
+				
 					<div class="napoje">
+					<h2>Napoje</h2>
 						<xsl:for-each select="Kino/Bar/Napoje/Napoj">
-							<div class="napoj"><xsl:value-of select="."/></div>
+							<div class="napoj">Nazwa Napoju: <xsl:value-of select="."/></div>
 						</xsl:for-each>	
 					</div>
-				<h2>Przekaski</h2>
+				
 					<div class="przekaski">
+					<h2>Przekaski</h2>
 						<xsl:for-each select="Kino/Bar/Przekaski/Przekaska">
-							<div class="przekaska"><xsl:value-of select="."/></div>
+							<div class="przekaska">Nazwa: <xsl:value-of select="."/></div>
 						</xsl:for-each>	
 					</div>
 			</section>
 				
 			<section>
 				<h2>Zaufali Nam</h2>
-					
+					<div class="czleki">
 						<xsl:for-each select="Kino/Klienci/Klient">
 						<div class="czlek">
-							<div class="czlekImie"><xsl:value-of select="Imie"/></div>
-							<div class="czlekNazwisko"><xsl:value-of select="Nazwisko"/></div>
-							<div class="czlekEmail"><xsl:value-of select="Email"/></div>
+							<div class="czlekImie">Imie:<xsl:value-of select="Imie"/></div>
+							<div class="czlekNazwisko">Nazwisko<xsl:value-of select="Nazwisko"/></div>
+							<div class="czlekEmail">Email:<xsl:value-of select="Email"/></div>
 							</div>
 						</xsl:for-each>	
-					
+					</div>
+					<form id="nowyCzlek">
+						  Imie: <input type="text" id="czlekImieInput" name="czlekName"/><br/>
+						  Nazwisko: <input type="text" id="czlekNazwiskoInput" name="czlekNazwisko"/><br/>
+						  Email: <input type="text" id="czlekEmailInput" name="czlekMail"/><br/>
+					</form>
+				<button id="dodanieKlienta">Dodaj klienta</button>
 			</section>
-			<script src="script.js"></script>
+				<script src="script.js"></script>
 			</body>
 		</html>
 	</xsl:template>

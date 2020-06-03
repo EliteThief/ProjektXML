@@ -1,79 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Kino>
+<?xml-stylesheet type="text/xsl" href="ProjektXML.xsl"?>
+<Kino xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ProjektXML.xsd">
 	<Pracownicy>
 		<Pracownik Plec='M'>
 			<Imie>Piotr</Imie>
 			<Nazwisko>Fornal</Nazwisko>
 			<Umowa Typ='Zlecenie'>
-				<DataPodpisania>17-06-2019</DataPodpisania>
-				<DataZakonczenia>18-06-2021</DataZakonczenia>		
+				<DataPodpisania>2019-06-17</DataPodpisania>
+				<DataZakonczenia>2021-06-18</DataZakonczenia>		
 			</Umowa>
 			<Email>piotrfornal1997@gmail.com</Email>
 		</Pracownik>
-		
+
 		<Pracownik Plec='M'>
 			<Imie>Mateusz</Imie>
 			<Nazwisko>Jendernal</Nazwisko>
 			<Umowa Typ='Prace' >
-				<DataPodpisania>23-07-2019</DataPodpisania>
-				<DataZakonczenia>23-10-2020</DataZakonczenia>
-				<Email>mateuszjendernal@gmail.com</Email>
+				<DataPodpisania>2019-07-23</DataPodpisania>
+				<DataZakonczenia>2020-10-23</DataZakonczenia>
 			</Umowa>
+			<Email>mateuszjendernal@gmail.com</Email> 
 		</Pracownik>
-		
+
 		<Pracownik Plec='K'>
 			<Imie>Aleksandra</Imie>
 			<Nazwisko>Fornal</Nazwisko>
 			<Umowa Typ = 'Zlecenie'>
-				<DataPodpisania>01.01.2019 </DataPodpisania>
-				<DataZakonczenia>31.12.2020</DataZakonczenia>
-				<Email>aleksandraWitkowska@wp.pl</Email>
+				<DataPodpisania>2019-01-01</DataPodpisania>
+				<DataZakonczenia>2020-12-31</DataZakonczenia>
 			</Umowa>
+			<Email>aleksandraWitkowska@wp.pl</Email> 
 		</Pracownik>
-		
+
 		<Pracownik Plec='K'>
 			<Imie>Karolina</Imie>
 			<Nazwisko>Wyszkoni</Nazwisko>
 			<Umowa Typ = 'Zlecenie'>
-				<DataPodpisania>12-12-2018</DataPodpisania>
-				<DataZakonczenia>30-12-2022 </DataZakonczenia>
-				<Email>karo99@o2.pl</Email>
+				<DataPodpisania>2018-12-12</DataPodpisania>
+				<DataZakonczenia>2022-12-30</DataZakonczenia>
 			</Umowa>
+			<Email>karo99@o2.pl</Email>	
 		</Pracownik>
 	</Pracownicy>
-	
+
 	<Filmy>
 		<Film Kategoria='Dramat'>
 			<Tytul>Joker</Tytul>
 			<Rezyser>
-				<Imie>Todd</Imie>
+				<Imie>Todd</Imie> 
 				<Nazwisko>Phillips</Nazwisko>
 			</Rezyser>
 			<Wytwornia>A Joint Effort Productions</Wytwornia>
 			<Obsada>
 				<Aktor>
 					<Imie>Joaquin</Imie>
-					<Nazwisko>Phoenix</Nazwisko>
+					<Nazwisko>Phoenix</Nazwisko> 
 				</Aktor>
-				
+
 				<Aktor>
 					<Imie>Robert</Imie>
-					<Nazwisko>De Niro</Nazwisko>
+					<Nazwisko>De Niro</Nazwisko>  
 				</Aktor>
-				
+
 				<Aktor>
 					<Imie>Frances</Imie>
 					<Nazwisko>Conroy</Nazwisko>
 				</Aktor>
-				
+
 				<Aktor>
 					<Imie>Leigh</Imie>
 					<Nazwisko>Gill</Nazwisko>
-				</Aktor>
+				</Aktor> 
 			</Obsada>
 		</Film>
-		
-		<Film Kategoria='Akcja)'>
+
+		<Film Kategoria='Akcja'>   
 			<Tytul>Tyler Rake: Ocalenie</Tytul>
 			<Rezyser>
 				<Imie>Sam</Imie>
@@ -85,44 +87,47 @@
 					<Imie>Chris</Imie>
 					<Nazwisko>Hemsworth</Nazwisko>
 				</Aktor>
-				
+
 				<Aktor>
 					<Imie>Randeep</Imie>
 					<Nazwisko>Hooda</Nazwisko>
-				</Aktor>
-				
+				</Aktor> 
+
 				<Aktor>
 					<Imie>Golshifteh</Imie>
 					<Nazwisko>Farahani</Nazwisko>
 				</Aktor>
-				
+
 				<Aktor>
 					<Imie>David</Imie>
 					<Nazwisko>Harbour</Nazwisko>
 				</Aktor>
 			</Obsada>
 		</Film>
-		
+
 		<Film Kategoria='sensacyjny'>
 			<Tytul>Skok Stulecia</Tytul>
-			<Rezyser>Christian Gudegast</Rezyser>
+			<Rezyser>
+				<Imie>Christian</Imie> 
+				<Nazwisko>Gudegast</Nazwisko>
+			</Rezyser> 
 			<Wytwornia>Atmosphere Entertainment MM</Wytwornia>
 			<Obsada>
 				<Aktor>
 					<Imie>Pablo</Imie>
-					<Nazwisko>Schreiber</Nazwisko>
+					<Nazwisko>Schreiber</Nazwisko> 
 				</Aktor>
-				
+
 				<Aktor>
 					<Imie>Gerard</Imie>
 					<Nazwisko>Butler</Nazwisko>
 				</Aktor>
-				
+
 				<Aktor>
 					<Imie>O'Shea</Imie>
-					<Nazwisko>Jackson Jr.</Nazwisko>
+					<Nazwisko>Jackson Jr</Nazwisko>
 				</Aktor>
-				
+
 				<Aktor>
 					<Imie>Mo</Imie>
 					<Nazwisko>McRae</Nazwisko>
@@ -131,10 +136,10 @@
 		</Film>
 	</Filmy>
 	<SaleKinowe>
-		<Sala NrSali ='1'>
+		<Sala NrSali ='1'> 
 			<Rzad Numer='1'>
 				<Miejsce>1</Miejsce>
-				<Miejsce>2</Miejsce>
+				<Miejsce>2</Miejsce> 
 				<Miejsce>3</Miejsce>
 				<Miejsce>4</Miejsce>
 				<Miejsce>5</Miejsce>
@@ -248,21 +253,21 @@
 				<Miejsce>2</Miejsce>
 				<Miejsce>3</Miejsce>
 				<Miejsce>4</Miejsce>
-				<Miejsce>5</Miejsce>
+				<Miejsce>5</Miejsce> 
 			</Rzad>
 		</Sala>
 	</SaleKinowe>
 	<Bar>
 		<Napoje>
-			<Napoj>Coca-Cola</Napoj>
+			<Napoj>Coca-Cola</Napoj> 
 			<Napoj>Fanta</Napoj>
 			<Napoj>Pepsi</Napoj>
 			<Napoj>7UP</Napoj>			
 		</Napoje>
-		
+
 		<Przekaski>
 			<Przekaska>PopCorn</Przekaska>
-			<Przekaska>Nachos</Przekaska>
+			<Przekaska>Nachos</Przekaska> 
 			<Przekaska>Chipsy</Przekaska>
 		</Przekaski>
 	</Bar>
@@ -272,25 +277,25 @@
 			<Nazwisko>Kowalska</Nazwisko>
 			<Email>SupiGrazi123@wp.pl</Email>
 		</Klient>
-		
-		<Klient>
+
+		<Klient> 
 			<Imie>Ariel</Imie>
 			<Nazwisko>Najlepszy</Nazwisko>
 			<Email>doprania@gmail.com</Email>
 		</Klient>
-		
+
 		<Klient>
 			<Imie>Dosia</Imie>
 			<Nazwisko>Pralka</Nazwisko>
 			<Email>Hiacynt@o2.pl</Email>
 		</Klient>
-		
+
 		<Klient>
 			<Imie>Mateusz</Imie>
 			<Nazwisko>Jendernal</Nazwisko>
 			<Email>KrytykFilmowy@gmail.com</Email>
 		</Klient>
-		
+
 		<Klient>
 			<Imie>Tatiana</Imie>
 			<Nazwisko>Brzeszczyczykiewicz</Nazwisko>

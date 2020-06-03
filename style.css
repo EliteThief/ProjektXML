@@ -1,0 +1,99 @@
+body {
+	width:100%;
+}
+section {
+	text-align:center;
+	margin: 20px;
+	padding:20px;
+}
+
+h2 {
+	color:#d9ab2e;
+}
+
+.pracownik {
+	margin:20px;
+}
+
+.pracownikImie {
+	font-style:italic;
+}
+
+.pracownikNazwisko {
+	
+}
+
+.pracownikEmail {
+	
+}
+
+.pracownikPlec {
+	
+}
+
+.filmy {
+	display:flex;
+	align-items: stretch;
+	justify-content:space-between;
+}
+.film{
+	margin:20px;
+}
+
+.filmTytul {
+
+}
+
+.filmWytwornia {
+	
+}
+
+.filmRezyser {
+	
+}
+
+.aktor{
+	margin:20px;
+}
+
+.napoje {
+	margin:20px;
+}
+
+.napoj{
+	margin:20px;
+	display:inline-block;
+}
+
+.przekaski{
+	margin:20px;
+	display:inline-block;
+}
+
+.przekaska {
+	margin:20px;
+	display:inline-block;
+}
+
+.czleki{
+	display:flex;
+	flex-wrap:wrap;
+	align-items: stretch;
+	justify-content:space-between;	
+}
+
+.czlek{
+	margin:20px;
+}
+
+.czlekImie{
+	
+}
+
+.czlekNaziwsko{
+	
+}
+
+.czlekEmail {
+	
+}

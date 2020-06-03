@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- definition of simple elements -->
+<xs:element name="Imie" type="xs:string"/>
+
+
+<xs:element name="Nazwisko">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z ]+"/>
+			<xs:whiteSpace value="replace"/>
+		</xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+<xs:element name="DataPodpisania" type="xs:date"/>
+<xs:element name="DataZakonczenia" type="xs:date"/>
+
+<xs:element name="Email">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[^@]+@[^\.]+\..+"/>
+		</xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+<xs:element name="Tytul" type="xs:string"/>
+
+<xs:element name="Wytwornia" type="xs:string"/>
+
+
+<xs:element name="Miejsce">
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[1-9]"/>
+		</xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+<xs:element name="Napoj">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z0-9-]+"/>
+		</xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+<xs:element name="Przekaska" type="xs:string"/>
+
+
+<!-- definition of attributes -->
+<xs:attribute name="Plec">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="M|K"/>
+		</xs:restriction>
+	</xs:simpleType>
+ </xs:attribute>
+<xs:attribute name="Typ">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Zlecenie|Prace|Dzielo"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:attribute>
+<xs:attribute name="Kategoria">
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([A-Za-z])*"/>
+		</xs:restriction>
+	</xs:simpleType>
+ </xs:attribute>
+ 
+<xs:attribute name="NrSali">
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:maxInclusive value="10"/>
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+ </xs:attribute>
+ 
+<xs:attribute name="Numer">
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:maxInclusive value="10"/>
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+ </xs:attribute>
+
+<!-- definition of complex elements -->
+
+	<xs:element name="Umowa">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DataPodpisania"/>
+				<xs:element ref="DataZakonczenia"/>
+			</xs:sequence>
+			<xs:attribute ref="Typ" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Pracownik">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Imie"/>
+				<xs:element ref="Nazwisko"/>
+				<xs:element ref="Umowa"/>
+				<xs:element ref="Email" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute ref="Plec" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Pracownicy">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Pracownik" minOccurs="0" maxOccurs="10"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Rezyser">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Imie"/>
+				<xs:element ref="Nazwisko"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Aktor">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Imie"/>
+				<xs:element ref="Nazwisko"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Obsada">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Aktor" minOccurs="0" maxOccurs="10"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Film">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Tytul"/>
+				<xs:element ref="Rezyser"/>
+				<xs:element ref="Wytwornia"/>
+				<xs:element ref="Obsada"/>
+			</xs:sequence>
+			<xs:attribute ref="Kategoria" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Filmy">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Film" minOccurs="0" maxOccurs="10"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Rzad">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Miejsce" minOccurs="0" maxOccurs="10"/>
+			</xs:sequence>
+			<xs:attribute ref="Numer" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Sala">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Rzad" minOccurs="0" maxOccurs="10"/>
+			</xs:sequence>
+			<xs:attribute ref="NrSali" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="SaleKinowe">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Sala" minOccurs="0" maxOccurs="10"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Napoje">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Napoj" minOccurs="0" maxOccurs="10"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Przekaski">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Przekaska" minOccurs="0" maxOccurs="10"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Bar">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Napoje"/>
+				<xs:element ref="Przekaski"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Klient">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Imie"/>
+				<xs:element ref="Nazwisko"/>
+				<xs:element ref="Email"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Klienci">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Klient" minOccurs="0" maxOccurs="10"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Kino">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Pracownicy"/>
+				<xs:element ref="Filmy"/>
+				<xs:element ref="SaleKinowe"/>
+				<xs:element ref="Bar"/>
+				<xs:element ref="Klienci"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
