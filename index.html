@@ -1,33 +1,48 @@
 <html>
    <head>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
       <link rel="stylesheet" type="text/css" href="style.css"/>
    </head>
    <body>
       <section>
          <h2>Nasi Pracownicy</h2>
-         <div class="pracownik">
-            <div class="pracownikImie">Imie: Piotr</div>
-            <div class="pracownikNazwisko">Nazwisko: Fornal</div>
-            <div class="pracownikEmail">Email: piotrfornal1997@gmail.com</div>
-            <div class="pracownikPlec">Mezczyzna</div>
-         </div>
-         <div class="pracownik">
-            <div class="pracownikImie">Imie: Mateusz</div>
-            <div class="pracownikNazwisko">Nazwisko: Jendernal</div>
-            <div class="pracownikEmail">Email: mateuszjendernal@gmail.com</div>
-            <div class="pracownikPlec">Mezczyzna</div>
-         </div>
-         <div class="pracownik">
-            <div class="pracownikImie">Imie: Aleksandra</div>
-            <div class="pracownikNazwisko">Nazwisko: Fornal</div>
-            <div class="pracownikEmail">Email: aleksandraWitkowska@wp.pl</div>
-            <div class="pracownikPlec">Kobieta</div>
-         </div>
-         <div class="pracownik">
-            <div class="pracownikImie">Imie: Karolina</div>
-            <div class="pracownikNazwisko">Nazwisko: Wyszkoni</div>
-            <div class="pracownikEmail">Email: karo99@o2.pl</div>
-            <div class="pracownikPlec">Kobieta</div>
+         <div class="pracownicy" id="pracownicy">
+            <div class="pracownik">
+               <div class="pracownikImie">Imie: <span>Piotr</span>
+                  <input type="text" name="noweImie" class="hidden"/>
+               </div>
+               <i class="material-icons edytuj">edit</i><i class="material-icons potwierdz hidden">check</i>
+               <div class="pracownikNazwisko">Nazwisko: Fornal</div>
+               <div class="pracownikEmail">Email: piotrfornal1997@gmail.com</div>
+               <div class="pracownikPlec">Mezczyzna</div>
+            </div>
+            <div class="pracownik">
+               <div class="pracownikImie">Imie: <span>Mateusz</span>
+                  <input type="text" name="noweImie" class="hidden"/>
+               </div>
+               <i class="material-icons edytuj">edit</i><i class="material-icons potwierdz hidden">check</i>
+               <div class="pracownikNazwisko">Nazwisko: Jendernal</div>
+               <div class="pracownikEmail">Email: mateuszjendernal@gmail.com</div>
+               <div class="pracownikPlec">Mezczyzna</div>
+            </div>
+            <div class="pracownik">
+               <div class="pracownikImie">Imie: <span>Aleksandra</span>
+                  <input type="text" name="noweImie" class="hidden"/>
+               </div>
+               <i class="material-icons edytuj">edit</i><i class="material-icons potwierdz hidden">check</i>
+               <div class="pracownikNazwisko">Nazwisko: Fornal</div>
+               <div class="pracownikEmail">Email: aleksandraWitkowska@wp.pl</div>
+               <div class="pracownikPlec">Kobieta</div>
+            </div>
+            <div class="pracownik">
+               <div class="pracownikImie">Imie: <span>Karolina</span>
+                  <input type="text" name="noweImie" class="hidden"/>
+               </div>
+               <i class="material-icons edytuj">edit</i><i class="material-icons potwierdz hidden">check</i>
+               <div class="pracownikNazwisko">Nazwisko: Wyszkoni</div>
+               <div class="pracownikEmail">Email: karo99@o2.pl</div>
+               <div class="pracownikPlec">Kobieta</div>
+            </div>
          </div>
       </section>
       <section>
@@ -52,33 +67,75 @@
       </section>
       <section>
          <h2>Znani Aktorzy</h2>
-         <div class="aktor">Aktor :Joaquin Phoenix</div>
-         <div class="aktor">Aktor :Robert De Niro</div>
-         <div class="aktor">Aktor :Frances Conroy</div>
-         <div class="aktor">Aktor :Leigh Gill</div>
-         <div class="aktor">Aktor :Chris Hemsworth</div>
-         <div class="aktor">Aktor :Randeep Hooda</div>
-         <div class="aktor">Aktor :Golshifteh Farahani</div>
-         <div class="aktor">Aktor :David Harbour</div>
-         <div class="aktor">Aktor :Pablo Schreiber</div>
-         <div class="aktor">Aktor :Gerard Butler</div>
-         <div class="aktor">Aktor :O'Shea Jackson Jr</div>
-         <div class="aktor">Aktor :Mo McRae</div>
+         <div class="aktorzy" id="aktorzy">
+            <div class="aktor">Aktor :<span class="persona">Joaquin Phoenix</span>
+            </div>
+            <div class="aktor">Aktor :<span class="persona">Robert De Niro</span>
+            </div>
+            <div class="aktor">Aktor :<span class="persona">Frances Conroy</span>
+            </div>
+            <div class="aktor">Aktor :<span class="persona">Leigh Gill</span>
+            </div>
+            <div class="aktor">Aktor :<span class="persona">Chris Hemsworth</span>
+            </div>
+            <div class="aktor">Aktor :<span class="persona">Randeep Hooda</span>
+            </div>
+            <div class="aktor">Aktor :<span class="persona">Golshifteh Farahani</span>
+            </div>
+            <div class="aktor">Aktor :<span class="persona">David Harbour</span>
+            </div>
+            <div class="aktor">Aktor :<span class="persona">Pablo Schreiber</span>
+            </div>
+            <div class="aktor">Aktor :<span class="persona">Gerard Butler</span>
+            </div>
+            <div class="aktor">Aktor :<span class="persona">O'Shea Jackson Jr</span>
+            </div>
+            <div class="aktor">Aktor :<span class="persona">Mo McRae</span>
+            </div>
+         </div>
+         <div class="sortowanie">
+            <span class="sort" id="sortujPoImieniu">Sortuj po imieniu</span>
+            <span class="sort" id="sortujPoNazwisku">Sortuj po nazwisku</span>
+         </div>
       </section>
       <section>
          <h2> Nasz Bar </h2>
-         <div class="napoje">
+         <div class="napoje" id="napoje">
             <h2>Napoje</h2>
-            <div class="napoj">Nazwa Napoju: Coca-Cola</div>
-            <div class="napoj">Nazwa Napoju: Fanta</div>
-            <div class="napoj">Nazwa Napoju: Pepsi</div>
-            <div class="napoj">Nazwa Napoju: 7UP</div>
+            <div class="napojKontener">
+               <div class="napoj">Nazwa Napoju: Coca-Cola</div>
+               <span class="licznik">0</span>
+               <span class="dodaj">+</span>
+            </div>
+            <div class="napojKontener">
+               <div class="napoj">Nazwa Napoju: Fanta</div>
+               <span class="licznik">0</span>
+               <span class="dodaj">+</span>
+            </div>
+            <div class="napojKontener">
+               <div class="napoj">Nazwa Napoju: Pepsi</div>
+               <span class="licznik">0</span>
+               <span class="dodaj">+</span>
+            </div>
+            <div class="napojKontener">
+               <div class="napoj">Nazwa Napoju: 7UP</div>
+               <span class="licznik">0</span>
+               <span class="dodaj">+</span>
+            </div>
          </div>
-         <div class="przekaski">
+         <div class="przekaski" id="przekaski">
             <h2>Przekaski</h2>
-            <div class="przekaska">Nazwa: PopCorn</div>
-            <div class="przekaska">Nazwa: Nachos</div>
-            <div class="przekaska">Nazwa: Chipsy</div>
+            <div class="przekaskiKontener">
+               <div class="przekaska">Nazwa: PopCorn</div>
+               <span class="licznik">0</span>
+               <span class="dodaj">+</span>
+               <div class="przekaska">Nazwa: Nachos</div>
+               <span class="licznik">0</span>
+               <span class="dodaj">+</span>
+               <div class="przekaska">Nazwa: Chipsy</div>
+               <span class="licznik">0</span>
+               <span class="dodaj">+</span>
+            </div>
          </div>
       </section>
       <section>
@@ -111,12 +168,15 @@
             </div>
          </div>
          <form id="nowyCzlek">
-						  Imie: <input type="text" id="czlekImieInput" name="czlekName"/><br/>
-						  Nazwisko: <input type="text" id="czlekNazwiskoInput" name="czlekNazwisko"/><br/>
-						  Email: <input type="text" id="czlekEmailInput" name="czlekMail"/><br/>
+						  Imie: <input type="text" id="czlekImieInput" name="czlekName"/>
+            <br/>
+						  Nazwisko: <input type="text" id="czlekNazwiskoInput" name="czlekNazwisko"/>
+            <br/>
+			 Email: <input type="text" id="czlekEmailInput" name="czlekMail"/>
+            <br/>
          </form>
          <button id="dodanieKlienta">Dodaj klienta</button>
       </section>
-      <script src="script.js"></script>
+	  <script src="script.js"></script>
    </body>
 </html>

@@ -8,16 +8,18 @@
 	<xsl:template match="/">
 <html>
 <head>
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
+	
 </head>
 			<body>
 			<section>
 				<h2>Nasi Pracownicy</h2>	
-				
+				<div class='pracownicy' id='pracownicy'>
 				<xsl:for-each select="Kino/Pracownicy/Pracownik">
 				
 						<div class="pracownik">
-							<div class="pracownikImie">Imie: <xsl:value-of select="Imie"/></div>
+							<div class="pracownikImie">Imie: <span><xsl:value-of select="Imie"/></span> <input type="text" name="noweImie" class="hidden"/></div><i class="material-icons edytuj">edit</i><i class="material-icons potwierdz hidden">check</i>
 							<div class="pracownikNazwisko">Nazwisko: <xsl:value-of select="Nazwisko"/></div>
 							<div class="pracownikEmail">Email: <xsl:value-of select="Email"/></div>
 							
@@ -30,6 +32,7 @@
 							</xsl:if>
 						</div>
 				</xsl:for-each>
+				</div>
 			</section>
 			
 			<section>
@@ -47,32 +50,43 @@
 			</section>
 			<section>	
 				<h2>Znani Aktorzy</h2>
-				
+				   <div class="aktorzy" id="aktorzy">
 					<xsl:for-each select="Kino/Filmy/Film/Obsada/Aktor">
-						<div class="aktor">Aktor :<xsl:value-of select="Imie"/><xsl:text> </xsl:text><xsl:value-of select="Nazwisko"/></div>
+						<div class="aktor">Aktor :<span class="persona"><xsl:value-of select="Imie"/><xsl:text> </xsl:text><xsl:value-of select="Nazwisko"/></span></div>
 					</xsl:for-each>	
+				</div>
+				<div class="sortowanie">
+					<span class="sort" id="sortujPoImieniu">Sortuj po imieniu</span><span class="sort" id="sortujPoNazwisku">Sortuj po nazwisku</span>
+				</div>
 			</section>
 			<section>
 				<h2> Nasz Bar </h2>
-				
-					<div class="napoje">
+					<div class="napoje" id="napoje">
 					<h2>Napoje</h2>
 						<xsl:for-each select="Kino/Bar/Napoje/Napoj">
+						<div class="napojKontener">
 							<div class="napoj">Nazwa Napoju: <xsl:value-of select="."/></div>
+							<span class="licznik">0</span>
+							<span class="dodaj">+</span>
+						</div>
 						</xsl:for-each>	
 					</div>
 				
-					<div class="przekaski">
+					<div class="przekaski" id="przekaski">
 					<h2>Przekaski</h2>
+						<div class="przekaskiKontener">
 						<xsl:for-each select="Kino/Bar/Przekaski/Przekaska">
 							<div class="przekaska">Nazwa: <xsl:value-of select="."/></div>
+							<span class="licznik">0</span>
+							<span class="dodaj">+</span>
 						</xsl:for-each>	
+						</div>
 					</div>
-			</section>
+				</section>
 				
 			<section>
 				<h2>Zaufali Nam</h2>
-					<div class="czleki">
+					<div class="czleki" id="czleki">
 						<xsl:for-each select="Kino/Klienci/Klient">
 						<div class="czlek">
 							<div class="czlekImie">Imie:<xsl:value-of select="Imie"/></div>
@@ -88,7 +102,7 @@
 					</form>
 				<button id="dodanieKlienta">Dodaj klienta</button>
 			</section>
-				<script src="script.js"></script>
+			<script src="script.js"></script>
 			</body>
 		</html>
 	</xsl:template>
